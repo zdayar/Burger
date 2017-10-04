@@ -1,0 +1,22 @@
+body {
+    background-color: antiquewhite;
+}
+
+#page-wrap {
+    width: 800px;
+    margin: 0 auto;
+}
+
+li {
+    padding: 5px;
+    margin: 5px;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+td {
+    padding: 5px 15px;
+}
+

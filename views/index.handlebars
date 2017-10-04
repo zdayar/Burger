@@ -1,0 +1,53 @@
+<tr>
+    <td>
+        <!-- uneaten burgers on the left side with a "devour" button next to each -->
+        <table>
+            <!-- Pass in data from server.js -->
+            {{#each burgers}}
+                {{#unless this.devoured}}
+                    <tr>
+                        <td>
+                            {{this.id}}. {{this.burger_name}}
+                        </td>
+                        <td>
+                            <button data-id="{{this.id}}" class="devour">Devour</button>
+                        </td>
+                    </tr>
+                {{/unless}}
+            {{/each}}
+        </table>
+    </td>
+    <td>
+        <!-- devoured burgers on the right side -->
+        <table>
+            <!-- Pass in data from server.js -->
+            {{#each burgers}}
+                {{#if this.devoured}}
+                    <tr>
+                        <td>
+                            {{this.id}}. {{this.burger_name}}
+                        </td>
+                    </tr>
+                {{/if}}
+            {{/each}}
+        </table>
+    </td>
+</tr>
+
+<tr>
+    <td colspan="2" align="center">
+        <h3>Add a Burger</h3>
+
+        <form class="create-form">
+
+            <div class="form-group">
+                <textarea rows="2" cols="60" id="burger_name" name="burger"></textarea>
+                <button type="submit">Add</button>
+            </div>
+
+        </form>
+    </td>
+</tr>
+
+
+
